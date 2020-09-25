@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'maxangularassignment4';
+  oddComponents: any[] = [];
+  evenComponents: any[] = [];
+
+  onStartIncrement = increment => {
+    if(increment % 2 === 0)
+      this.evenComponents.push({'number': increment});
+    else
+      this.oddComponents.push({'number': increment});
+  }
 }
